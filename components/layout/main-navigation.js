@@ -6,9 +6,7 @@ function MainNavigation() {
   return (
     <header className={classes.header}>
       <Link href="/">
-        <a>
-          <div className={classes.logo}>Home</div>
-        </a>
+        <div className={classes.logo}>Home</div>
       </Link>
       <nav>
         <ul>
