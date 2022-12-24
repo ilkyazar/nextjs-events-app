@@ -1,12 +1,23 @@
-## Authentiaction
+# Events App
 
-NextAuth package is used for authentication.
+### `Developed with Next.js, NextAuth, bcryptjs & MongoDB`
 
-## Database
+## Authentication:
 
-Mongodb is used.
-bcryptjs package is used for encrypting the passwords.
+- NextAuth package is used for authentication.
+- User can sign up and login via e-mail.
+- User can logout.
 
+## Database:
+
+- MongoDB is used.
+- bcryptjs package is used for encrypting the passwords to store them in db.
+
+<br />
+
+---
+
+<br />
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
