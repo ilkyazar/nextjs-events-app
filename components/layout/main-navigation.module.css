@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   height: 5rem;
-  background-color: #38015c;
+  background-color: var(--violet);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
@@ -46,10 +46,10 @@
 }
 
 .header a:hover {
-  color: #c291e2;
+  color: var(--pink);
 }
 
 .header button:hover {
-  background-color: #c291e2;
-  color: #38015c;
+  background-color: var(--pink);
+  color: var(--violet);
 }

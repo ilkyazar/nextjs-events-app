@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --violet: #360568;
+  --purple: #5b2a86;
+  --pink: #c291e2;
+  --blue: #7785ac;
+  --opal: #9ac6c5;
+  --green: #a5e6ba;
+  --dark-green: #222e26;
+}
+
 body {
   font-family: 'Open Sans', 'Lato', sans-serif;
   margin: 0;

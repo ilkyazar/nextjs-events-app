@@ -2,10 +2,10 @@
   text-decoration: none;
   cursor: pointer;
   font: inherit;
-  background-color: #9a22e9;
-  border: 1px solid #9a22e9;
+  background-color: var(--green);
+  border: 1px solid var(--green);
   border-radius: 6px;
-  color: #dafff7;
+  color: var(--dark-green);
   padding: 0.5rem 1.5rem;
   text-align: center;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
@@ -13,6 +13,6 @@
 
 .btn:hover,
 .btn:active {
-  background-color: #7904c7;
-  border-color: #7904c7;
+  background-color: var(--opal);
+  border-color: var(--opal);
 }
