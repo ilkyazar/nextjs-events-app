@@ -1,3 +1,5 @@
+import { getFormattedAddress } from '../../lib/address-helper';
+import { getHumanReadableDate } from '../../lib/date-helper';
 import Button from '../ui/button';
 
 import classes from './event-item.module.css';
@@ -5,15 +7,8 @@ import classes from './event-item.module.css';
 function EventItem(props) {
   const { title, image, date, location, id } = props;
 
-  const humanReadableDate = new Date(date).toLocaleDateString(
-    'en-US',
-    {
-      dat: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    }
-  );
-  const formattedAddress = location.replace(', ', '\n');
+  const humanReadableDate = getHumanReadableDate(date);
+  const formattedAddress = getFormattedAddress(location);
 
   const exploreLink = `/events/${id}`;
 
