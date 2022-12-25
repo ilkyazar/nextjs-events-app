@@ -1,11 +1,12 @@
-import Button from '../ui/button';
+import { getFeaturedEvents } from '../../dummy-events-data';
 import classes from './starting-page.module.css';
 
 function StartingPageContent() {
+  const featuredEvents = getFeaturedEvents();
+
   return (
     <section className={classes.starting}>
-      <h1>Welcome!</h1>
-      <Button>Click me</Button>
+      <ul></ul>
     </section>
   );
 }
