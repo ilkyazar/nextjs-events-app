@@ -1,4 +1,5 @@
 import { getFeaturedEvents } from '../../dummy-events-data';
+import EventList from '../events/event-list';
 import classes from './starting-page.module.css';
 
 function StartingPageContent() {
@@ -6,7 +7,7 @@ function StartingPageContent() {
 
   return (
     <section className={classes.starting}>
-      <ul></ul>
+      <EventList items={featuredEvents} />
     </section>
   );
 }
