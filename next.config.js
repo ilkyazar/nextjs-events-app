@@ -8,5 +8,12 @@ module.exports = () => {
       mongodb_auth_collection: process.env.MONGODB_AUTH_COLLECTION,
       mongodb_collection: process.env.MONGODB_COLLECTION,
     },
+    webpack: (config) => {
+      config.experiments = {
+        topLevelAwait: true,
+        layers: true,
+      };
+      return config;
+    },
   };
 };
