@@ -1,12 +1,11 @@
-import { getAllEvents } from '../../dummy-events-data';
+import { getAllEvents } from '../../helpers/api-util';
 import EventList from '../../components/events/event-list';
-import { getSession } from 'next-auth/react';
 import EventsSearch from '../../components/events/events-search';
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
-function AllEventsPage() {
-  const allEvents = getAllEvents();
+function AllEventsPage(props) {
   const router = useRouter();
 
   function searchEventsHandler(year, month) {
@@ -16,26 +15,27 @@ function AllEventsPage() {
 
   return (
     <Fragment>
+      <Head>
+        <title>Next.js Events App - All Events</title>
+        <meta
+          name="description"
+          content="Discover events from all around the world"
+        />
+      </Head>
       <EventsSearch onSearch={searchEventsHandler} />
-      <EventList items={allEvents} />
+      <EventList items={props.events} />
     </Fragment>
   );
 }
 
-export async function getServerSideProps(context) {
-  const session = await getSession({ req: context.req });
-
-  if (!session) {
-    return {
-      redirect: {
-        destination: '/auth',
-        permanent: false,
-      },
-    };
-  }
+export async function getStaticProps() {
+  const allEvents = await getAllEvents();
 
   return {
-    props: { session },
+    props: {
+      events: allEvents,
+    },
+    revalidate: 60,
   };
 }
 

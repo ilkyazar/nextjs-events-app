@@ -1,0 +1,30 @@
+.content {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.banner {
+  width: 30%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(/images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner h1 {
+  padding: 30px;
+  font-size: xxx-large;
+  background-color: black;
+  opacity: 75%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 1px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 840px) {
+  .banner {
+    display: none;
+  }
+}

@@ -83,12 +83,12 @@
   }
 
   .item img {
-    width: 40%;
+    width: 60%;
     height: 14rem;
   }
 
   .content {
-    width: 60%;
+    flex-grow: 1;
     padding: 0;
     text-align: left;
   }
@@ -100,5 +100,6 @@
   .actions {
     flex-direction: row;
     justify-content: flex-end;
+    margin-top: 25px;
   }
 }

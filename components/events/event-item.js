@@ -1,6 +1,6 @@
-import { getFormattedAddress } from '../../lib/address-helper';
-import { getHumanReadableDate } from '../../lib/date-helper';
+import { getHumanReadableDate } from '../../helpers/date-helper';
 import Button from '../ui/button';
+import Image from 'next/image';
 
 import classes from './event-item.module.css';
 
@@ -8,13 +8,12 @@ function EventItem(props) {
   const { title, image, date, location, id } = props;
 
   const humanReadableDate = getHumanReadableDate(date);
-  const formattedAddress = getFormattedAddress(location);
 
   const exploreLink = `/events/${id}`;
 
   return (
     <li className={classes.item}>
-      <img src={'/' + image} alt={title} />
+      <Image src={'/' + image} alt={title} width={250} height={160} />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>
@@ -22,7 +21,7 @@ function EventItem(props) {
             <time>{humanReadableDate}</time>
           </div>
           <div className={classes.address}>
-            <address>{formattedAddress}</address>
+            <address>{location}</address>
           </div>
         </div>
         <div className={classes.actions}>

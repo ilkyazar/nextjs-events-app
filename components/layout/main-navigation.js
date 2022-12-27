@@ -24,6 +24,11 @@ function MainNavigation() {
           )}
           {session && (
             <li>
+              <Link href="/events">All Events</Link>
+            </li>
+          )}
+          {session && (
+            <li>
               <Link href="/profile">Profile</Link>
             </li>
           )}

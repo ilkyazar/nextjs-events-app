@@ -2,29 +2,33 @@ import AddressIcon from '../ui/icons/address-icon';
 import DateIcon from '../ui/icons/date-icon';
 import LogisticsItem from './logistics-item';
 import classes from './event-logistics.module.css';
-import { getHumanReadableDate } from '../../lib/date-helper';
-import { getFormattedAddress } from '../../lib/address-helper';
+import { getHumanReadableDate } from '../../helpers/date-helper';
+import Image from 'next/image';
 
 function EventLogistics(props) {
   const { date, address, image, imageAlt } = props;
 
   const humanReadableDate = getHumanReadableDate(date);
-  const addressText = getFormattedAddress(address);
 
   return (
-    <section className={classes.logistics}>
+    <div className={classes.logistics}>
       <div className={classes.image}>
-        <img src={`/${image}`} alt={imageAlt} />
+        <Image
+          src={`/${image}`}
+          alt={imageAlt}
+          width={300}
+          height={300}
+        />
       </div>
       <ul className={classes.list}>
         <LogisticsItem icon={DateIcon}>
           <time>{humanReadableDate}</time>
         </LogisticsItem>
         <LogisticsItem icon={AddressIcon}>
-          <address>{addressText}</address>
+          <address>{address}</address>
         </LogisticsItem>
       </ul>
-    </section>
+    </div>
   );
 }
 

@@ -5,7 +5,7 @@
 }
 
 :root {
-  --violet: #360568;
+  --violet: #260845;
   --purple: #5b2a86;
   --pink: #c291e2;
   --blue: #7785ac;
@@ -14,9 +14,11 @@
   --dark-green: #222e26;
 }
 
-body {
+body,
+html {
   font-family: 'Open Sans', 'Lato', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 h1,

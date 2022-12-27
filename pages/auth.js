@@ -3,6 +3,7 @@ import { getSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 
 import AuthForm from '../components/auth/auth-form';
+import SideBanner from '../components/layout/side-banner';
 
 function AuthPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +23,11 @@ function AuthPage() {
     return <p>Loading...</p>;
   }
 
-  return <AuthForm />;
+  return (
+    <SideBanner>
+      <AuthForm />
+    </SideBanner>
+  );
 }
 
 export default AuthPage;

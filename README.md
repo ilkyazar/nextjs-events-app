@@ -7,11 +7,36 @@
 - NextAuth package is used for authentication.
 - User can sign up and login via e-mail.
 - User can logout.
+- User can change their password.
+- Necessary routes are protected by checking session in getServerSideProps.
 
 ## Database:
 
 - MongoDB is used.
 - bcryptjs package is used for encrypting the passwords to store them in db.
+- There are two collections for registered users and events.
+- Events are fetched from the db.
+
+## Features
+
+- User can discover all events.
+- Featured events are listed on the home page.
+- Event details can be seen on its individual route.
+- User can search event in some date range.
+
+## Rendering Methods
+
+- Static Site Generation is used to render the event detail pages.
+- Static Site Generation is used to render all events.
+- Server-Side Rendering is used to render filtered events according to the search params.
+
+![Home](public/images/home.png)
+![Event Detail](public/images/event-detail.png)
+![All Events](public/images/all-events.png)
+![Login](public/images/login.png)
+![Signup](public/images/signup.png)
+![Filtered Events](public/images/filtered-events.png)
+![Signup](public/images/change-password.png)
 
 <br />
 
